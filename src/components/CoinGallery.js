@@ -1,10 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+// استيراد صورك الفعلية من المجلد
+import img1 from '../assets/images/1.png';
+import img2 from '../assets/images/2.png';
+import img3 from '../assets/images/3.png';
+import img4 from '../assets/images/4.png';
+import img5 from '../assets/images/5.png';
+
 const coins = [
-  { id: 1, name: "دينار ذهبي معتق", period: "العصر العباسي", img: "https://images.unsplash.com/photo-1610375461246-83df8201a002?q=80&w=400" },
-  { id: 2, name: "سوليدوس بيزنطي", period: "الإمبراطورية الرومانية", img: "https://images.unsplash.com/photo-1589483232748-515c025575ba?q=80&w=400" },
-  { id: 3, name: "درهم فضي قديم", period: "الأندلس", img: "https://images.unsplash.com/photo-1624515542297-906969562762?q=80&w=400" },
+  { id: 1, name: "كنز عتيق 1", period: "مقتنيات أمنية الثمينة", img: img1 },
+  { id: 2, name: "كنز عتيق 2", period: "مقتنيات أمنية الثمينة", img: img2 },
+  { id: 3, name: "كنز عتيق 3", period: "مقتنيات أمنية الثمينة", img: img3 },
+  { id: 4, name: "كنز عتيق 4", period: "مقتنيات أمنية الثمينة", img: img4 },
+  { id: 5, name: "كنز عتيق 5", period: "مقتنيات أمنية الثمينة", img: img5 },
 ];
 
 const CoinGallery = () => {
@@ -23,8 +32,8 @@ const CoinGallery = () => {
             key={coin.id}
             whileHover={{ y: -10 }}
             style={{
-              background: 'rgba(255, 255, 255, 0.6)', // زجاج فاتح
-              border: '1px solid #4DB6AC', // حدود تيركوازية
+              background: 'rgba(255, 255, 255, 0.6)', // زجاج فاتح تيركوازي
+              border: '1px solid #4DB6AC', 
               padding: '25px', 
               borderRadius: '25px', 
               textAlign: 'center',
@@ -36,7 +45,7 @@ const CoinGallery = () => {
               <img 
                 src={coin.img} 
                 alt={coin.name} 
-                style={{ width: '100%', display: 'block', borderRadius: '15px' }} 
+                style={{ width: '100%', display: 'block', borderRadius: '15px', height: '250px', objectFit: 'cover' }} 
               />
             </div>
             <h3 style={{ color: '#212121', marginBottom: '10px' }}>{coin.name}</h3>

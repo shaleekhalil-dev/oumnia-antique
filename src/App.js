@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import CoinGallery from './components/CoinGallery';
 import ContactForm from './components/ContactForm';
 // استيراد الصورة رقم 6 كخلفية (تأكد من وجودها في المجلد)
-import bgWatermark from './assets/images/6.jpg'; 
+import bgWatermark from './assets/images/6.png'; 
 
 function App() {
   return (
